@@ -1,0 +1,35 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "@shared/*": [
+        "../shared/src/*"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "allowJs": true,
+    "incremental": true,
+    "esModuleInterop": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "app",
+    "components",
+    "lib",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

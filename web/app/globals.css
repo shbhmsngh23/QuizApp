@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --background: 0 0% 98%;
+  --foreground: 222 47% 11%;
+  --primary: 238 83% 67%;
+  --primary-foreground: 0 0% 100%;
+  --muted: 210 40% 96%;
+  --border: 214 32% 91%;
+}
+
+.dark {
+  color-scheme: dark;
+  --background: 222 47% 6%;
+  --foreground: 210 40% 96%;
+  --primary: 238 83% 70%;
+  --primary-foreground: 0 0% 100%;
+  --muted: 222 35% 16%;
+  --border: 222 35% 20%;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+}
+
+body.font-dyslexic {
+  font-family: var(--font-dyslexic);
+}
+
+.bg-grid {
+  background-image: radial-gradient(hsl(var(--border)) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+@media print {
+  button,
+  .no-print {
+    display: none !important;
+  }
+  .print-area {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+  .print-card {
+    box-shadow: none !important;
+    border: 1px solid #e5e7eb !important;
+  }
+  body {
+    background: white;
+    color: black;
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "quizmaster-ai",
+  "private": true,
+  "packageManager": "npm@10.9.2",
+  "workspaces": [
+    "web",
+    "mobile",
+    "functions",
+    "shared"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md,css,scss,json}\"",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test"
+  },
+  "devDependencies": {
+    "prettier": "^3.7.4",
+    "turbo": "^2.8.9",
+    "typescript": "5.9.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
